@@ -2,6 +2,7 @@ console.log("Rock paper scissors")
 console.log(23 + 97)
 
 const items = { 0 : 'Rock', 1: 'Paper', 2 : 'Scissors'}
+let [playerScore, computerScore] = [0,0];
 
 function computerPlay() {
     function getRandomInt(max) {
@@ -13,15 +14,20 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
     let s1 = playerSelection.toLowerCase();
     let s2 = computerSelection.toLowerCase();
+    let res = {p: "rock", s: "paper", r: "scissors"};
 
-    if (s1 === s2) return "TIE";
-	let res = {p: "rock", s: "paper", r: "scissors"};
-	return `Player chose ${s1} and computer chose ${s2}. ` + 
+    if (s1 === s2) {
+        return "TIE";
+	} else {
+        res[s1[0]] === s2 ? playerScore++ : computerScore++;
+        return `Player chose ${s1} and computer chose ${s2}. ` + 
     (res[s1[0]] === s2 ? "Player wins." : "Computer wins.");
+    }
 }
 
-// const playerSelection = "ROCK";
-// console.log(playRound(playerSelection, computerSelection));
+function score() {
+    return `Player: ${playerScore}, Computer: ${computerScore}`;
+}
 
 function game() {
     let playerSelection = prompt('Rock, paper, scissors?');
@@ -30,3 +36,4 @@ function game() {
 }
 
 console.log(game());
+console.log(score());
