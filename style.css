@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Utility */
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.game {
+    grid-template-columns: 3fr 3fr 3fr;
+    padding: 1rem;
+    align-items: center;
+}
+
+.game i{
+    padding: 1rem;
+}
+
+.game button {
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+
+.game button:hover {
+    background-color: RoyalBlue;
+}
