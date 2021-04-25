@@ -13,13 +13,14 @@
 }
 
 .game {
-    grid-template-columns: 3fr 3fr 3fr;
-    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2rem;
     align-items: center;
 }
 
 .game i{
-    padding: 1rem;
+    margin: auto;
 }
 
 .game button {
