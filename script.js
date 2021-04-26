@@ -1,8 +1,26 @@
 console.log("Rock paper scissors")
 console.log(23 + 97)
 
+let computerSelection;
+let playerSelection;
+let computerScore = 0;
+let playerScore = 0;
+
+let buttons = document.querySelectorAll(".button");
+
+buttons.forEach(button => button.addEventListener("click", showScore));
+
+function showScore(e) {
+    console.log(e.target);
+}
+
+console.log(buttons)
+
+
+///////////////////
+///////////////////
+
 const items = { 0 : 'Rock', 1: 'Paper', 2 : 'Scissors'}
-let [playerScore, computerScore] = [0,0];
 
 function computerPlay() {
     function getRandomInt(max) {
