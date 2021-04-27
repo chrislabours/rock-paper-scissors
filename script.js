@@ -8,10 +8,10 @@ let playerScore = 0;
 
 let buttons = document.querySelectorAll(".button");
 
-buttons.forEach(button => button.addEventListener("click", showScore));
+buttons.forEach(button => button.addEventListener("mousedown", showScore));
 
 function showScore(e) {
-    console.log(e.target);
+    console.log(this.id);
 }
 
 console.log(buttons)
