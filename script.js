@@ -1,6 +1,3 @@
-console.log("Rock paper scissors")
-console.log(23 + 97)
-
 let computerSelection;
 let playerSelection;
 let computerScore = 0;
@@ -11,10 +8,20 @@ let buttons = document.querySelectorAll(".button");
 buttons.forEach(button => button.addEventListener("mousedown", showScore));
 
 function showScore(e) {
-    console.log(this.id);
+    playerSelection = this.id;
+    
+    const container = document.querySelector('.score');
+    const content = document.createElement('div');
+    content.classList.add('content');
+    content.textContent = playerSelection;
+    container.appendChild(content);
+
+    console.log(playerSelection);
 }
 
-console.log(buttons)
+
+
+
 
 
 ///////////////////
